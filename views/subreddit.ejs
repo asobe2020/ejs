@@ -1,0 +1,13 @@
+<%- include('partials/head') %>
+    <%- include('partials/navbar') %>
+    <h1><%= name %> subreddit</h1>
+    <h2><%= description %></h2>
+    <p><%= subscribers %>人が購読中</p>
+    <hr>
+        <% for(let post of posts){ %>
+            <p><%= post.title %> - <b><%= post.author %></b></p>
+            <% if(post.img){ %>
+                <img src="<%= post.img %>" slt="post.img">
+            <% } %>
+        <% } %>
+        <%- include('partials/footer') %>
